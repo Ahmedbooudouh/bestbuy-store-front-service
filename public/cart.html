@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Cart | BestBuy Demo Store</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top utility bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <a href="#">Order Status</a>
+        <a href="#">Deals</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="#">Best Buy Business</a>
+        <a href="#">Français</a>
+      </div>
+    </div>
+
+    <!-- Main header -->
+    <header class="main-header">
+      <div class="brand">
+        <div class="brand-logo">BB</div>
+        <div class="brand-text">
+          <span class="brand-name">BestBuy Demo Store</span>
+          <span class="brand-tagline">Cloud-Native Microservices Edition</span>
+        </div>
+      </div>
+
+      <div class="search-container">
+      <!-- Disabled search on cart page -->
+        <input
+          type="text"
+          placeholder="Cart page"
+          aria-label="Cart page"
+          disabled
+        />
+        <button type="button" disabled>Search</button>
+      </div>
+
+      <nav class="header-links">
+        <a href="index.html">Store</a>
+        <a href="#">Account</a>
+        <a href="cart.html" id="cart-link">Cart (0)</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="cart-page">
+        <h1>Your Cart</h1>
+        
+
+        <div id="cart-empty-message" class="cart-empty">
+         <h1>  is empty.</h1>
+        </div>
+
+        <table id="cart-table" class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Line Total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+           
+          </tbody>
+        </table>
+
+        <div id="cart-summary" class="cart-summary">
+          <p id="cart-total">Total: $0.00</p>
+          <button id="clear-cart-btn" type="button">Clear Cart</button>
+          <button id="checkout-btn" type="button">
+            Checkout </button>
+          <button
+            id="back-to-store-btn"
+            type="button"
+            onclick="window.location.href='index.html';"
+          >
+            Back to Store
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>BestBuy Demo Store &mdash; Cloud-Native Project (Student Demo)</p>
+    </footer>
+    <script src="config.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

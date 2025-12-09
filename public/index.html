@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BestBuy Demo Store</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top utility bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <a href="#">Order Status</a>
+        <a href="#">Deals</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="#">Best Buy Business</a>
+        <a href="#">Français</a>
+      </div>
+    </div>
+
+    <!-- Main header -->
+    <header class="main-header">
+      <div class="brand">
+        <div class="brand-logo">BB</div>
+        <div class="brand-text">
+          <span class="brand-name">BestBuy Demo Store</span>
+          <span class="brand-tagline">Cloud-Native Microservices Edition</span>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search products"
+          aria-label="Search products"
+        />
+        <button type="button">Search</button>
+      </div>
+
+      <nav class="header-links">
+        <a href="#">Stores</a>
+        <a href="#">Account</a>
+        <!-- Cart link goes to its own page -->
+        <a href="cart.html" id="cart-link">Cart (0)</a>
+      </nav>
+    </header>
+<!-- Global message / alert -->
+<div
+  id="global-message"
+  class="alert hidden"
+  role="status"
+  aria-live="polite"
+></div>
+
+    <main class="page-content">
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Welcome to your BestBuy Demo Store</h1>
+          <p>
+            This front-end is powered by a cloud-native microservices
+            architecture running on Node.js, MongoDB, Docker, and (later) AKS.
+          </p>
+          <p class="hero-highlight">
+            All products below are loaded live from the
+            <strong>product-service</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Categories (clickable filters) -->
+      <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+          <!-- Laptops -->
+          <div class="category-card" data-category="Laptops">
+            <img
+              src="images/category-laptops.jpg"
+              alt="Laptops"
+              class="category-image"
+            />
+            <h3>Laptops</h3>
+            <p>Productivity, study, and development.</p>
+          </div>
+
+          <!-- TV & Home Theatre -->
+          <div class="category-card" data-category="TV & Home Theatre">
+            <img src="images/category-tv.png" alt="TV and Home Theatre" class="category-image" />
+            <h3>TV &amp; Home Theatre</h3>
+            <p>4K, HDR, and streaming devices.</p>
+          </div>
+
+          <!-- Headphones and Portable Speakers -->
+          <div
+            class="category-card"
+            data-category="Headphones and Portable Speakers"
+          >
+            <img
+              src="images/category-accessories.png"
+              alt="Headphones and Portable Speakers"
+              class="category-image"
+            />
+            <h3>Headphones &amp; Portable Speakers</h3>
+            <p>Immersive audio on the go.</p>
+          </div>
+
+          <!-- Video Games, Consoles, and Accessories -->
+          <div
+            class="category-card"
+            data-category="Video Games, Consoles, and Accessories"
+          >
+            <img
+              src="images/cat-games.jpg"
+              alt="Video Games, Consoles, and Accessories"
+              class="category-image"
+            />
+            <h3>Video Games &amp; Consoles</h3>
+            <p>Consoles, controllers, and accessories.</p>
+          </div>
+
+          <!-- PC Gaming -->
+          <div class="category-card" data-category="PC Gaming">
+            <img
+              src="images/cat-pc-gaming.jpg"
+              alt="PC Gaming"
+              class="category-image"
+            />
+            <h3>PC Gaming</h3>
+            <p>Gaming PCs, GPUs, and peripherals.</p>
+          </div>
+
+          <!-- Accessories -->
+          <div class="category-card" data-category="Accessories">
+            <img
+              src="images/cat-accessories.jpg"
+              alt="Accessories"
+              class="category-image"
+            />
+            <h3>Accessories</h3>
+            <p>Keyboards, mice, cables, and more.</p>
+          </div>
+
+          <!-- All / Other -->
+          <div class="category-card" data-category="ALL">
+            <img
+              src="images/allproduct.jpg"
+              alt="All products"
+              class="category-image"
+            />
+            <h3>All / Other</h3>
+            <p>Show all products or custom categories.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products section (filled by app.js) -->
+      <section id="products-section" class="products-section">
+        <div class="products-header">
+          <h2>Products </h2>
+          <span class="products-subtitle">
+            Data loaded from <code>/api/products</code> (product-service).
+          </span>
+        </div>
+
+        <div id="products-container" class="products-grid">
+          <!-- Product cards will be injected here by app.js -->
+        </div>
+
+        <p id="error-message" class="error"></p>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>BestBuy Demo Store &mdash; Cloud-Native Project (Student Demo)</p>
+    </footer>
+    <script src="config.js"></script>
+
+     <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
